@@ -68,13 +68,13 @@ if (!dir.exists('fonts')) {
 }
 
 #Downloading font if necessary
-if (!file.exists("fonts/BRAILLE1.ttf")) {
-	download.file("http://www.fontsaddict.com/download/braille-normal.ttf", "fonts/BRAILLE1.ttf")
-}
+#if (!file.exists("fonts/BRAILLE1.ttf")) {
+#	download.file("http://www.fontsaddict.com/download/braille-normal.ttf", "fonts/BRAILLE1.ttf")
+#}
 
 #Preparing PDF with braille font
-font_import(pattern = "BRAILLE1.ttf", paths="fonts", prompt=FALSE)
-font_import(pattern = "Swell-Braille.ttf", paths="fonts", prompt=FALSE)
+font_import(pattern = "BRAILLE1.ttf", paths=system.file("fonts", package="BrailleR"), prompt=FALSE)
+#font_import(pattern = "Swell-Braille.ttf", paths="fonts", prompt=FALSE)
 
 
 #Showing graphic
