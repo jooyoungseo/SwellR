@@ -77,20 +77,9 @@ extrafont::loadfonts(device = "pdf", quiet = TRUE)
 pdf(file)
 
 #Optimizing graphic size
-par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines,
-family = 
-#"Swell Braille"
-"Braille Normal"
+par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal"
 )
-
-#Graphic code below:
-
-sink("description.txt")
-BrailleR::VI(x)
-sink()
-sink("warnings.txt")
-warnings()
-sink()
+x
 
 #Closing R graphic window
 dev.off()
