@@ -35,30 +35,6 @@
 swell <-
 function(x, file="output.pdf", lines=c(1)) {
 
-# Install required packages Block starts
-chooseCRANmirror(ind=2)
-
-# installr package
-if (!require(installr)) {
-	install.packages("installr", dependencies=TRUE)
-}
-
-# BrailleR package
-if (!require(BrailleR)) {
-	install.packages('BrailleR')
-}
-
-# extrafont package
-if(!require(extrafont)) {
-install.packages("extrafont", dependencies=T); require(extrafont)
-}
-
-# Cairo package
-#if(!require(Cairo)) {
-#install.packages("Cairo", dependencies=T); require(Cairo)
-#}
-#Required package block ends
-
 # Body code Starts here
 if (interactive()) {
 
