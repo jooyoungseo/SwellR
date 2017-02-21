@@ -17,7 +17,7 @@
 #' 2. Check "Landscape" in the print dialog box as well.
 #' * For boxplot, you do not need to check the "Landscape," just leave it as a "Portray." However, please check the "Fit" all the time.
 
-#' *Information*:
+#' Information:
 #' If you are not familiar with what swell form machine is, please refer to [this web site](http://www.americanthermoform.com/product/swell-form-graphics-ii-machine/).
 
 #' @return Nothing within the R session, but a pdf file will be created in the user's working directory.
@@ -59,19 +59,9 @@ if (interactive()) {
 		}
 
 #Core Code Starts here.
-#Checking required Braille Font
-if (!dir.exists('fonts')) {
-	dir.create('fonts')
-}
-
-#Downloading font if necessary
-#if (!file.exists("fonts/BRAILLE1.ttf")) {
-#	download.file("http://www.fontsaddict.com/download/braille-normal.ttf", "fonts/BRAILLE1.ttf")
-#}
-
 #Preparing PDF with braille font
 if (!"Braille Normal" %in% extrafont::fonts()) {
-font_import(pattern = "BRAILLE1.ttf", paths=system.file("fonts", package="BrailleR"), prompt=FALSE)
+extrafont::font_import(pattern = "BRAILLE1.ttf", paths=system.file("fonts", package="SwellR"), prompt=FALSE)
 }
 
 #Showing graphic
@@ -107,10 +97,6 @@ dev.off()
 
 # embed the font
 extrafont::embed_fonts(file)
-
-
-#embed_fonts("Tactile%03d.pdf")
-
 #Code Ends here.
 	}
 

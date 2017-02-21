@@ -11,8 +11,7 @@ Description: SwellR is intended to support for blind R users who have an access 
 Repository: CRAN
 License: GPL-2
 Depends:
-    R (>= 3.2.0),
-    knitr
+    R (>= 3.2.0)
 Imports:
     extrafont,
     BrailleR,
