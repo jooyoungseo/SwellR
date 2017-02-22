@@ -27,8 +27,9 @@ swell
 1. check "Fit" in the print dialog box (the shortcut key is ALT+F).
 2. Check "Landscape" in the print dialog box as well.
 * For boxplot, you do not need to check the "Landscape," just leave it as a "Portray." However, please check the "Fit" all the time.
-*Information*:
+Information:
 If you are not familiar with what swell form machine is, please refer to [this web site](http://www.americanthermoform.com/product/swell-form-graphics-ii-machine/).
+A short Youtube video will help you to understand how this function can be employed in conjunction with Swell form machine: https://www.youtube.com/watch?v=ClI555l4Z1M
 }
 \examples{
 swell(hist(airquality$Ozone), "test.pdf")

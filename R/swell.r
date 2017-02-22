@@ -19,6 +19,8 @@
 
 #' Information:
 #' If you are not familiar with what swell form machine is, please refer to [this web site](http://www.americanthermoform.com/product/swell-form-graphics-ii-machine/).
+#' A short Youtube video will help you to understand how this function can be employed in conjunction with Swell form machine: https://www.youtube.com/watch?v=ClI555l4Z1M
+
 
 #' @return Nothing within the R session, but a pdf file will be created in the user's working directory.
 
