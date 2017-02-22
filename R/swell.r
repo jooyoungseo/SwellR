@@ -59,17 +59,18 @@ if (interactive()) {
 		}
 
 #Core Code Starts here.
-#Preparing PDF with braille font
+#Preparing braille font
 if (!"Braille Normal" %in% extrafont::fonts()) {
 extrafont::font_import(pattern = "BRAILLE1.ttf", paths=system.file("fonts", package="SwellR"), prompt=FALSE)
 }
 
 #Showing graphic
-#windowsFonts(A=windowsFont("Braille Normal"))
-#X11()
-#window(x, family=A)
+extrafont::loadfonts(device = "win", quiet = TRUE)
+par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal")
+x
 #Showing graphic code ends
 
+#Generating Braille PDF
 #Loading required fonts
 extrafont::loadfonts(device = "pdf", quiet = TRUE)
 
@@ -77,8 +78,7 @@ extrafont::loadfonts(device = "pdf", quiet = TRUE)
 pdf(file)
 
 #Optimizing graphic size
-par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal"
-)
+par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal")
 x
 
 #Closing R graphic window
@@ -86,7 +86,7 @@ dev.off()
 
 # embed the font
 extrafont::embed_fonts(file)
-#Code Ends here.
+#PDF Generator Code Ends here.
 	}
 
 	# For other OS

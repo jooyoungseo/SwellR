@@ -1,1 +1,0 @@
-start gs920w64.exe /S
