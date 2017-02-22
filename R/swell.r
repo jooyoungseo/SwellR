@@ -74,8 +74,8 @@ x
 #Loading required fonts
 extrafont::loadfonts(device = "pdf", quiet = TRUE)
 
-#cairo_pdf(filename=file)
-pdf(file)
+cairo_pdf(filename=file)
+#pdf(file)
 
 #Optimizing graphic size
 par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal")
