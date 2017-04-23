@@ -38,7 +38,7 @@ swell <-
 function(x, file="output.pdf", lines=c(1)) {
 
 # Body code Starts here
-if (interactive()) {
+#if (interactive()) {
 
 	# For Windows Platform
 	if (.Platform$OS.type == "windows") {
@@ -95,11 +95,11 @@ extrafont::embed_fonts(file)
 	else {
 		warning("It is still under developent.")
 	}
-}
+#}
 
-else {
-	warning("Use this function only under interactive mode.")
-}
+#else {
+#	warning("Use this function only under interactive mode.")
+#}
 # Body code ends
 }
 #Function Ends
