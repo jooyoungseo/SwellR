@@ -76,8 +76,8 @@ extrafont::font_import(pattern = "BRAILLE1.ttf", paths=system.file("fonts", pack
 #Loading required fonts
 extrafont::loadfonts(device = "pdf", quiet = TRUE)
 
-#Cairo::cairo_pdf(filename=file)
-pdf(file)
+Cairo::CairoPDF(file)
+#pdf(file)
 
 #Optimizing graphic size
 par(cex=1.2, cex.main=1.2, cex.lab=1.2, cex.axis=1.2, mar=c(5,5,3,2), col="black", pch=20, lty=lines, family = "Braille Normal")
