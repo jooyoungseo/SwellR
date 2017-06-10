@@ -6,6 +6,8 @@
 
 #' @description  The first argument to this function must be a call to create a graph, such as a histogram. Instead of opening a new graphics device, the graph will be created in a pdf file, with all text being presented using  a braille font.
 
+#' @export BRL.end
+
 #' @details
 #' *Note*: This function optimizes for both 11*11 and 11*8.5 swell touch papers. When printing a generated braille pdf, just remember two things:
 #' 1. check "Fit" in the print dialog box (the shortcut key is ALT+F).
